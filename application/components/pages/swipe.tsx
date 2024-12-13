@@ -10,8 +10,12 @@ import { useToast } from "@/hooks/use-toast";
 import { addCoinToPortfolio } from "@/lib/dbOperations";
 import { useSession } from "next-auth/react";
 import { useQuery } from "@tanstack/react-query";
-import { HfInference } from "@huggingface/inference";
-const inference = new HfInference("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");
+import { CdpAgentkit } from "@coinbase/cdp-agentkit-core";
+import { CdpToolkit } from "@coinbase/cdp-langchain";
+import { HumanMessage } from "@langchain/core/messages";
+import { MemorySaver } from "@langchain/langgraph";
+import { createReactAgent } from "@langchain/langgraph/prebuilt";
+import { ChatOpenAI } from "@langchain/openai";
 
 import { gql, request } from "graphql-request";
 const query = gql`
@@ -58,9 +62,91 @@ export function SwipePage({ category }: { category: string }) {
   });
   const [trustScore, setTrustScore] = useState(0);
   const [tokenbought, setTokenBought] = useState(false);
+  const [agent, setAgent] = useState<any>(null);
+  const [config, setConfig] = useState<any>(null);
+
+  async function initializeAgent() {
+    try {
+      const llm = new ChatOpenAI({
+        model: "llama",
+        apiKey: "GAIA",
+        configuration: {
+          baseURL: "https://llamatool.us.gaianet.network/v1",
+        },
+      });
+
+      const agentkit = await CdpAgentkit.configureWithWallet();
+      const cdpToolkit = new CdpToolkit(agentkit);
+      const tools = cdpToolkit.getTools();
+
+      const memory = new MemorySaver();
+      const agentConfig = {
+        configurable: { thread_id: "CDP AgentKit Chatbot Example!" },
+      };
+
+      const agent = createReactAgent({
+        llm,
+        checkpointSaver: memory,
+        messageModifier: "", // Remove the default message modifier as we'll use structured prompts
+        tools,
+      });
+
+      const exportedWallet = await agentkit.exportWallet();
+
+      return { agent, config: agentConfig };
+    } catch (error) {
+      console.error("Failed to initialize agent:", error);
+      throw error;
+    }
+  }
+
+  async function runProgrammaticMode(
+    agent: any,
+    config: any,
+    prompt: Array<{ role: string; content: string }>
+  ): Promise<string> {
+    try {
+      const messages = prompt.map((msg) => {
+        if (msg.role === "system") {
+          return {
+            type: "system",
+            content: msg.content,
+            _getType: (): string => "system",
+          };
+        }
+        return new HumanMessage(msg.content);
+      });
+
+      const stream = await agent.stream({ messages: messages }, config);
+      let response = "";
+
+      for await (const chunk of stream) {
+        if ("agent" in chunk) {
+          response += chunk.agent.messages[0].content;
+        } else if ("tools" in chunk) {
+          response += chunk.tools.messages[0].content;
+        }
+      }
+
+      return response;
+    } catch (error) {
+      console.error("Error in programmatic chat:", error);
+      throw error;
+    }
+  }
 
   useEffect(() => {
-    const callHuggingFace = async () => {
+    const initAgent = async () => {
+      const { agent, config } = await initializeAgent();
+      setAgent(agent);
+      setConfig(config);
+      console.log("Agent initialized");
+    };
+    initAgent();
+  }, []);
+
+  useEffect(() => {
+    const callAgent = async () => {
       const prompt: Array<{ role: string; content: string }> = [
         {
           role: "system",
@@ -71,27 +157,17 @@ export function SwipePage({ category }: { category: string }) {
           content: JSON.stringify(currentToken),
         },
       ];
-
-      let fullResponse = "";
       try {
-        for await (const chunk of inference.chatCompletionStream({
-          model: "mistralai/Mistral-Nemo-Instruct-2407",
-          messages: prompt,
-          max_tokens: 5,
-          stream: false,
-        })) {
-          let content = chunk.choices[0]?.delta?.content || "";
-          fullResponse += content;
-        }
+        const response = await runProgrammaticMode(agent, config, prompt);
 
-        console.log(fullResponse, "fullResponse");
-        setTrustScore(parseInt(fullResponse)); // Only set trust score if valid response
+        console.log(response, "Response");
+        setTrustScore(Number(response) || 50);
       } catch (err) {
-        console.error("Error calling HuggingFace API:", err);
+        console.error("Error calling Agent:", err);
       }
     };
 
-    callHuggingFace();
+    callAgent();
   }, [tokenbought]);
 
   // Background fetching of more tokens
