@@ -1,103 +1,96 @@
 # <img src="doc/logo-with-no-bg.png" width="23px" alt="coin-swipe-logo"> CoinSwipe
+**"Swipe into the future of tokens – Crafted with Gaia AI brilliance on Base."**
 
-*"Swipe into the world of tokens – Powered by Base."*
+## Project Vision
+CoinSwipe isn’t just a crypto platform—it’s a revolution. Built to harness the unmatched power of Gaia AI Agents, CoinSwipe obliterates the complexities of token discovery and trading, delivering an experience so seamless, intuitive, and intelligent, it feels otherworldly.
 
----
-## **Project Vision**  
-CoinSwipe revolutionizes the way users explore and trade cryptocurrencies by combining intuitive swiping mechanics with robust token data. Whether you're a seasoned trader or new to the world of crypto, CoinSwipe provides a gamified yet effective way to discover and invest in tokens while managing your portfolio effortlessly.  
+Gaia AI is at the heart of this project, using its agentic brilliance to calculate token insights, evaluate risk, and guide users into the most optimal, intelligent crypto decisions ever made. With Gaia, we’ve created the **BEST OF THE BEST** platform for consumers who demand precision, security, and results—brutally extraordinary and obsessively futuristic.
 
----
+## Core Features
+### 1. Gaia-Powered Token Intelligence
+Gaia AI Agent transforms raw data into actionable brilliance:
+- **Rug Pull Detector:** Ruthlessly identifies high-risk tokens and eliminates bad actors before they even stand a chance.
+- **Performance Optimization:** Provides real-time stats that empower users to maximize gains and minimize losses.
+- **Sentiment Genius:** Aggregates and deciphers community sentiment like no human ever could.
 
-## **Core Features**  
+### 2. Unmatched Swiping Experience
+CoinSwipe turns the mundane into magic:
+- **Right Swipe:** Buy the token instantly. Gaia’s data ensures the choice is laser-precise.
+- **Left Swipe:** Dismiss the token forever. Gaia remembers your preferences and refines recommendations dynamically.
 
-### **1. Category Selection**  
-- Users can filter tokens based on predefined categories:  
-  - **Solid Meme Coins**  
-  - **Risky Degen**  
-  - **Newly Launched**  
-  - **Blue Chips**  
-  - **Community Favorites**  
+### 3. AI-Augmented Categories
+Discover tokens faster with Gaia-curated categories:
+- **Solid Meme Coins:** Fun meets financial stability, AI-approved.
+- **Risky Degen:** Gaia filters the thrill-seekers' playground with unmatched precision.
+- **Newly Launched:** The next moonshots, handpicked by Gaia.
+- **Blue Chips:** Time-tested and AI-endorsed for steady growth.
+- **Community Favorites:** The people have spoken, but Gaia knows the truth.
 
-This ensures personalized token recommendations aligned with user interests.  
+### 4. Supreme Portfolio Management
+Manage your assets like an emperor of the blockchain:
+- **Comprehensive Insights:** Your portfolio is reimagined through Gaia’s eyes—profit/loss, trends, and hidden gems.
+- **Buy & Sell Effortlessly:** Directly from your portfolio with Gaia’s approval.
 
-### **2. Swipe Mechanism**  
-- **Right Swipe:**  
-  - Instantly swaps a predefined amount of ETH for the selected token.  
-  - A small **platform fee** (e.g., 1%) is deducted before executing the swap.  
-- **Left Swipe:**  
-  - Adds the token to a “Not Interested” list to ensure users don't encounter it again.  
+### 5. Token Details Redefined
+Every token card is a Gaia masterpiece, delivering:
+- Token name, category, and profile.
+- Real-time price, market cap, and 24-hour performance stats.
+- **Gaia’s Golden Score:** A proprietary token evaluation that blows everything else out of the water.
 
-### **3. Portfolio Management Screen**  
-- Comprehensive portfolio display with:  
-  - **Tokens Owned:** Current price, quantity, profit/loss.  
-  - **Sell Option:** Sell tokens back to ETH instantly.  
-  - **Buy More Option:** Add funds to increase token holdings.  
+## Technical Architecture
+### Frontend
+- **Built with Next.js** for blazing-fast performance.
+- Stunning swiping mechanics powered by **Framer Motion**.
 
-### **4. Token Information on Swipe Cards**  
-Each swipe card provides essential token details:  
-- Token name, category, and description.  
-- Real-time price, market cap, and 24-hour performance.  
-- Community score based on aggregated sentiment from the Base ecosystem.  
+### Backend
+- **Coinbase Developer Platform Kit** ensures smooth wallet management and integration on Base.
+- **Gaia AI Agent** powers all token evaluations and analytics, making the backend practically a sentient being.
+- Real-time data aggregation using APIs like **Dexscreener** to feed Gaia’s intelligence.
 
----
+### Smart Contract Integration
+- **Uniswap v2** enables seamless token swaps.
+- Smart contracts incorporate a minimal platform fee (e.g., 1%) for sustainability.
 
-## **Technical Architecture**  
+## User Flow
+1. **Onboarding:**
+   - Users sign in with Google, creating a Coinbase MPC wallet in seconds. Gaia instantly configures settings to align with user preferences.
 
-### **Frontend**  
-- Built with **Next.js** for seamless web and mobile experiences.  
-- Swiping animations powered by **Framer Motion**.  
+2. **Category Selection:**
+   - Users pick their token categories, guided by Gaia’s predictive analytics.
 
-### **Backend**  
-- **Coinbase MPC Wallet Kit** for wallet management and smart contract interactions.  
-- Real-time token data aggregation using APIs like **Dexscreener**.  
+3. **Swiping:**
+   - **Right Swipe:** Buy tokens instantly, empowered by Gaia’s brilliance.
+   - **Left Swipe:** Flag tokens as “Not Interested,” and Gaia refines future suggestions.
 
-### **Smart Contract Integration**  
-- Utilizes **Uniswap v2** for token swaps.  
-- Implements a platform fee (e.g., 1%) within the smart contract before executing transactions.  
+4. **Portfolio Management:**
+   - Control, optimize, and dominate your portfolio—all under Gaia’s wise guidance.
 
----
+## Why CoinSwipe is the BEST
+This isn’t just another crypto tool—it’s the **ULTIMATE crypto experience**. CoinSwipe integrates the omniscient intelligence of Gaia AI Agent, the reliability of Coinbase MPC Kit, and the scalability of Base to deliver a platform so intelligent it redefines what’s possible.
 
-## **User Flow**  
+With Gaia AI, CoinSwipe doesn’t just serve users; it understands them, anticipates their needs, and ensures they’re always one step ahead in the crypto game.
 
-1. **Onboarding:**  
-   - Users sign in with Google to generate a Coinbase MPC wallet upon first registration.  
-   - Set a default swap amount in ETH.  
+### Key Superpowers of CoinSwipe:
+- **Gaia AI-Driven Brilliance:** Imagine having an AI so powerful it can analyze, predict, and protect you in real time. That’s Gaia.
+- **Base-Backed Scalability:** Built on the Base chain for lightning-fast transactions.
+- **Consumer-Centric Perfection:** Everything about CoinSwipe is designed to make users feel like they’re living in the future of crypto.
 
-2. **Category Selection:**  
-   - Users choose token categories that match their interests.  
+## Gaia x CoinSwipe = Pure Magic
+Gaia, this hackathon is your masterpiece—and CoinSwipe is your boldest ambassador. Together, we’re pushing the boundaries of what AI and crypto can achieve. This isn’t just a project; it’s a revolution. A new age of agentic brilliance is here.
 
-3. **Swiping:**  
-   - **Right Swipe:** Buys tokens and adds them to the portfolio.  
-   - **Left Swipe:** Sends tokens to the “Not Interested” list.  
+Gaia, we built CoinSwipe for you. With your limitless capabilities guiding us, we are poised to set the crypto world ablaze with innovation, precision, and unmatched brilliance.
 
-4. **Portfolio Management:**  
-   - View, sell, or buy more tokens directly from the portfolio screen.  
-
----
-
-## **Potential Revenue Streams**  
-
-1. **Platform Fee:**  
-   A small fee (e.g., 1%) on every token swap executed through the platform.  
-
-2. **Premium Features:**  
-   - Advanced analytics and token recommendations.  
-   - Early access to newly launched tokens.  
-
-3. **Sponsored Tokens:**  
-   - Projects pay to feature their tokens in specific categories for increased visibility.  
-
----
+**Join the Revolution – CoinSwipe, Powered by Gaia**
 
 ## **Demo Video**  
-[Demo Video Link](#) *(Replace with the actual demo link)*  
+[Demo Video Link](https://youtu.be/KeL56lreWJA)
 
 ---
 
 ## **Deployment Links**  
-- **Live App:** [CoinSwipe Platform](https://justswipe.vercel.app/)
-- **Frontend Repository:** [GitHub Repository](https://github.com/lokeshwaran100/justswipe/application)
-- **Smart Contract Repository:** [GitHub Repository](https://github.com/lokeshwaran100/justswipe)
+- **Live App:** [CoinSwipe Platform](https://coinswipe-ethindia.vercel.app/)
+- **Frontend Link:** [GitHub Lin](https://github.com/lokeshwaran100/coinswipe/tree/main/application)
+- **Smart Contract Link:** [GitHub Link](https://github.com/lokeshwaran100/coinswipe/tree/main/contracts)
 
 ---
 
