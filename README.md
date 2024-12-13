@@ -89,8 +89,8 @@ Gaia, we built CoinSwipe for you. With your limitless capabilities guiding us, w
 
 ## **Deployment Links**  
 - **Live App:** [CoinSwipe Platform](https://coinswipe-ethindia.vercel.app/)
-- **Frontend Link:** [GitHub Link](https://github.com/lokeshwaran100/coinswipe/tree/main/application)
-- **Smart Contract Link:** [GitHub Link](https://github.com/lokeshwaran100/coinswipe/tree/main/contracts)
+- **Frontend Link:** [GitHub Link](https://github.com/capGoblin/coinswipe/tree/main/application)
+- **Smart Contract Link:** [GitHub Link](https://github.com/capGoblin/coinswipe/tree/main/contracts)
 
 ---
 
