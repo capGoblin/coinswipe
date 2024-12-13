@@ -53,7 +53,7 @@ Every token card is a Gaia masterpiece, delivering:
 
 ## User Flow
 1. **Onboarding:**
-   - Users sign in with Google, creating a Coinbase MPC wallet in seconds. Gaia instantly configures settings to align with user preferences.
+   - Users sign in with Google, creating a Coinbase CDP's MPC wallet in seconds. Gaia instantly configures settings to align with user preferences.
 
 2. **Category Selection:**
    - Users pick their token categories, guided by Gaia’s predictive analytics.
@@ -66,7 +66,7 @@ Every token card is a Gaia masterpiece, delivering:
    - Control, optimize, and dominate your portfolio—all under Gaia’s wise guidance.
 
 ## Why CoinSwipe is the BEST
-This isn’t just another crypto tool—it’s the **ULTIMATE crypto experience**. CoinSwipe integrates the omniscient intelligence of Gaia AI Agent, the reliability of Coinbase MPC Kit, and the scalability of Base to deliver a platform so intelligent it redefines what’s possible.
+This isn’t just another crypto tool—it’s the **ULTIMATE crypto experience**. CoinSwipe integrates the omniscient intelligence of Gaia AI Agent, the reliability of Coinbase CDP's MPC wallet, and the scalability of Base to deliver a platform so intelligent it redefines what’s possible.
 
 With Gaia AI, CoinSwipe doesn’t just serve users; it understands them, anticipates their needs, and ensures they’re always one step ahead in the crypto game.
 
